@@ -63,6 +63,8 @@ class ApiCallFragment : BaseFragment(), ApiCallMVPView {
     }
 
     override fun displayPosts(postList: List<PostModel>) {
+        loadingLayout.visibility = View.INVISIBLE
+        postRecyclerView.visibility = View.VISIBLE
         postsAdapter.addPostsToList(postList)
     }
 
